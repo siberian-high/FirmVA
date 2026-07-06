@@ -1,0 +1,18 @@
+# 환경 변수
+.env
+
+# 파이썬
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 산출물 및 작업물
+data/input/*
+data/work/*
+data/storage/*
+out/*
+!data/input/.gitkeep
+!data/work/.gitkeep
+!data/storage/.gitkeep
+!out/.gitkeep
