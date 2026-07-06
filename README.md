@@ -55,6 +55,7 @@ curl -F "file=@data/input/*.bin" http://127.0.0.1:8000/scan
 | 6 | Candidate(동적) | ChatGPT | `DynamicRaw.observations` | `Finding[]` (취약 판정만) | Report |
 | 7 | Report | — | `Finding[]` 전체 | `report.txt` + CLI | 끝 |
 <br/>
+
 > **핵심 규칙**
 - `StaticRaw`는 Orchestrator의 공유 저장소(`data/storage/static_raw.json`)에 저장되어
   Candidate 및 Attack Surface 가 **재사용**합니다. 
