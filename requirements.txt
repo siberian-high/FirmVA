@@ -1,3 +1,10 @@
+# 별도 설치 목록 (pip 아닌 시스템 도구)
+# binwalk : (v3.1.0) snap install binwalk
+# JDK     : (v21.0.11) apt install -y openjdk-21-jdk
+# Ghidra  : (v11.3.2) 공식 배포본 (https://github.com/NationalSecurityAgency/ghidra/releases?page=2#release-Ghidra_11.3.2_build)
+# LaurieWired/GhidraMCP : (v.1.4)LaurieWired/GhidraMCP 플러그인
+# QEMU    : (v6.2.0) apt-get install qemu-system-arm 
+
 # FirmVA
 langgraph>=0.2.0
 langchain-core>=0.3.0
@@ -12,8 +19,3 @@ requests>=2.31
 
 # QEMU MCP Server (mcp/qemu/server.py)
 fastmcp>=0.2.0
-
-# binwalk, Ghidra, QEMU는 pip 패키지가 아닌 시스템 도구이므로 별도 설치
-# binwalk : snap install binwalk
-# Ghidra  : 공식 배포본 + LaurieWired/GhidraMCP 플러그인
-# QEMU    : apt-get install qemu-system-arm
