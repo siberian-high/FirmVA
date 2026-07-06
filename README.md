@@ -42,7 +42,7 @@
 - Dynamic 이 새로 찾은 진입점(`new_entrypoints`)은 Candidate Agent로 넘기지 않고,
   `data/storage/new_entrypoints.json`에 **별도 기록**합니다.
 - Candidate Agent는 **취약으로 판정된 후보만** Report Agent로 전달합니다.
----
+
 <br/>
 
 
