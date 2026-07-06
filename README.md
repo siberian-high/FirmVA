@@ -107,16 +107,21 @@ FirmVA/
 │   │   ├── ghidra_mcp.py      # Ghidra 공개 MCP 클라이언트
 │   │   └── qemu_mcp.py        # QEMU 자체 MCP 클라이언트
 │   └── fastapi/
-│       └── server.py        # FastAPI .bin 업로드
+│       └── server.py        # FastAPI .bin 업로드   
 ├── test/
-│   └── demo.py              # 데모 테스트용 데이터
+│   └── demo.py              
 ├── mcp/
+│   ├── ghidra/
+│   │  └── GhidraMCP-release-1-4/
+│   │       ├── bridge_mcp_ghidra.py   # Ghidra 브리지
+│   │       └── GhidraMCP-1-4.zip      # Ghidra 익스텐션
+│   │
 │   └── qemu/                # 자체 구축 QEMU MCP 서버
-│       ├── server.py
-│       └── README.md
+│      ├── server.py
+│      └── README.md
 ├── data/
 │   ├── input/              # 업로드된 .bin 저장
 │   ├── work/               # binwalk 결과물 저장
 │   └── storage/            # 공유 저장소(json)
 └── out/                     # 보고서 저장(.txt)
- ``` 
+ ```
