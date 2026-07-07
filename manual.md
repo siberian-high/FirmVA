@@ -1,9 +1,18 @@
 # FirmVA 사용 매뉴얼
 > ⚠️ 본 프로젝트는 **본인이 소유·통제하는 안전한 실습 환경**에서만 사용하십시오.
-  
-  
-## 1. 환경 설정
+<br/>
+
+
+## 1. 레포지터리 clone
 ```bash
+# 1) 레포지터리 clone
+git clone https://github.com/siberian-high/FirmVA.git
+```
+<br/>
+
+## 2. 환경 설정
+```bash
+# clone한 레포지터리 경로로 이동
 # 1) 가상환경 생성
 python3.10 -m venv .venv
 
@@ -13,7 +22,7 @@ source .venv/bin/activate
 <br/>
 
 
-## 2. pip 설치
+## 3. pip 패키지 설치
 ```bash
 # requirements.txt 설치
 pip install -r requirements.txt
@@ -21,7 +30,7 @@ pip install -r requirements.txt
 <br/>
 
 
-## 3. 시스템 도구 설치
+## 4. apt/snap/zip 패키지 설치
 ```bash
 # 1) binwalk 설치
 snap install binwalk
@@ -53,7 +62,7 @@ unzip <파일명>.zip
 
 # 6) Python bridge 의존성 설치 확인
 source .venv/bin/activate 
-pip install mcp requests인
+pip install mcp requests
 
 # 7)  bridge 실행 (SSE 모드)
 python ~/FirmVA/mcp/ghidra/GhidraMCP-release-1-4/bridge_mcp_ghidra.py \
@@ -69,7 +78,7 @@ python ~/FirmVA/mcp/ghidra/GhidraMCP-release-1-4/bridge_mcp_ghidra.py \
 <br/>
 
 
-## 4. FirmVA 실행: 데모 테스트 (DEMO_MODE=true)
+## 5. FirmVA 전체 실행: 데모 테스트 (DEMO_MODE=true)
 
 ```bash
 # 실행 (데모 데이터로 전체 파이프라인 시연)
@@ -78,7 +87,7 @@ python run.py demo.bin
 <br/>
 
 
-## 5.FirmVA 실행: API 사용 (DEMO_MODE=false)
+## 6.FirmVA 전체 실행: API 사용 (DEMO_MODE=false)
 ```bash
 # 1. run.py 실행
 python run.py data/input/*.bin
@@ -92,4 +101,4 @@ python run.py data/input/*.bin
 uvicorn src.fastapi.server:app --port 8000
 # 2번 터미널
 curl -F "file=@data/input/*.bin" http://127.0.0.1:8000/scan
-```널
+```
